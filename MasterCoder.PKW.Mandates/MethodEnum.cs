@@ -4,6 +4,7 @@ namespace MasterCoder.PKW.Mandates
 {
     enum MethodEnum
     {
-        DHondta, SaintLague, HareNiemeyer, Unkonow
+        //enumeracja "Unkonow" jest nadmiarowa. Przecież i tak domyślnie używamy metody d'Hondt'a. Poza tym jest literówka w nazwie.
+        DHondta, SaintLague, HareNiemeyer
     }
 }
