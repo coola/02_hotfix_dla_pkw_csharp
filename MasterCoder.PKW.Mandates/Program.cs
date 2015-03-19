@@ -36,7 +36,8 @@ namespace MasterCoder.PKW.Mandates
             uint test;
             if (!UInt32.TryParse(args[0], out test) || !UInt32.TryParse(args[1], out test))
             {
-                throw new InputParametersException("Parameter should be digt.");
+                //poprawa literówki w opisie błędu
+                throw new InputParametersException("Parameter should be digit.");
             }
 
             if(string.IsNullOrWhiteSpace(args[2]) || !Directory.Exists(args[2]))
