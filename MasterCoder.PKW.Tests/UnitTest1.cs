@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using MasterCoder.PKW.Mandates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
