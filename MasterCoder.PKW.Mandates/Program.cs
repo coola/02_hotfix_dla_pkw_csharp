@@ -50,7 +50,10 @@ namespace MasterCoder.PKW.Mandates
         {
             foreach (var mandate in mandates)
             {
-                Console.WriteLine(string.Format("{0};{1};{2}", mandate.PartShortName, mandate.PartName, mandate.Mandates));
+                // wywołanie string.Format jest nadmiarowe w tym przypadku. Metoda Console.WriteLine już ma właściwości string.Format.
+                // Z dokumentacji metody Console.WriteLine: "Writes out a formatted string and a new line.  Uses the same 
+                // semantics as String.Format."
+                Console.WriteLine("{0};{1};{2}", mandate.PartShortName, mandate.PartName, mandate.Mandates);
             }
         }
     }
