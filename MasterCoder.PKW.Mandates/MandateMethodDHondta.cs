@@ -49,8 +49,8 @@ namespace MasterCoder.PKW.Mandates
 
         private double Calc(int v, int mandates)
         {
-            //rzutowanie v na double jest nadmiarowe
-            //po co mnożyć przez 1.0?
+            // rzutowanie v na double jest nadmiarowe
+            // po co mnożyć przez 1.0?
             return (v / (2*mandates + 1.0));
         }
     }
