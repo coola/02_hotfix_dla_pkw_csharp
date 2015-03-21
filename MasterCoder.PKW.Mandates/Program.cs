@@ -11,7 +11,7 @@ namespace MasterCoder.PKW.Mandates
         {
             try
             {
-                ValidateInputParameters(args);
+                Validator.ValidateInputParameters(args);
                 InputVotes votes = new InputVotes(args[2]);
 
                 IMandateMethod m = MandateMethodFactory.Get((MethodEnum)Int32.Parse(args[0]));
@@ -26,25 +26,7 @@ namespace MasterCoder.PKW.Mandates
             }
         }
 
-        private static void ValidateInputParameters(string[] args)
-        {
-            if (args.Length != 3)
-            {
-                throw new InputParametersException("Parameters count error.");
-            }
-
-            uint test;
-            if (!UInt32.TryParse(args[0], out test) || !UInt32.TryParse(args[1], out test))
-            {
-                //poprawa literówki w opisie błędu
-                throw new InputParametersException("Parameter should be digit.");
-            }
-
-            if(string.IsNullOrWhiteSpace(args[2]) || !Directory.Exists(args[2]))
-            {
-                throw new InputParametersException("Wrong path name.");
-            }
-        }
+        
 
         private static void ShowOnConsole(List<Mandate> mandates)
         {

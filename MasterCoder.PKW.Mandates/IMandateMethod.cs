@@ -3,7 +3,7 @@
 
 namespace MasterCoder.PKW.Mandates
 {   
-    interface IMandateMethod
+    public interface IMandateMethod
     {
         List<Mandate> CalculateMandates(List<Vote> votes, int mandates);
     }

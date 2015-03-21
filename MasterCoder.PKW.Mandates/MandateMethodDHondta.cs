@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    internal class MandateMethodDHondta : IMandateMethod
+    public class MandateMethodDHondta : IMandateMethod
     {
         public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
@@ -34,7 +34,7 @@ namespace MasterCoder.PKW.Mandates
             return partMandates;
         }
 
-        private List<Mandate> InitializeMandates(List<Vote> v)
+        public List<Mandate> InitializeMandates(List<Vote> v)
         {
             List<Mandate> partMandates = new List<Mandate>(v.Count);
 
@@ -51,7 +51,8 @@ namespace MasterCoder.PKW.Mandates
         {
             // rzutowanie v na double jest nadmiarowe
             // po co mnożyć przez 1.0?
-            return (v / (2*mandates + 1.0));
+            // usunięcie mnożenia przez dwa - mnożenie przez dwa współczynnika powoduje błąd obliczeń
+            return (v / (mandates + 1.0));
         }
     }
 }

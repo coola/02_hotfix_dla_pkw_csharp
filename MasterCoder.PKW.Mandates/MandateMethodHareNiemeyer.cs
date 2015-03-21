@@ -5,20 +5,23 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    class MandateMethodHareNiemeyer : IMandateMethod
+    public class MandateMethodHareNiemeyer : IMandateMethod
     {
         public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
             var v = votes;
             List<Mandate> partMandates = Init(v);
 
-            List<double> tab = new List<double>(v.Count);
+            List<double> tab = new List<double>();
             var totalVotes = v.Sum(x => x.ValidVotes);
 
             int mandCounter=0;
             for(int i=0; i<v.Count;i++)
             {
-                tab.Add(v[i].ValidVotes * mandatesCount / totalVotes);
+                // poprawka błędu typu "loss of fraction"
+                // jeżeli dzielimy same liczby typu int - część ułamkowa jest pomijana
+                // trzeba któryś z elementów działanai jawnie skastować na double
+                tab.Add(((double)v[i].ValidVotes * mandatesCount) / totalVotes);
                 partMandates[i].Mandates = (int)Math.Floor(tab[i]);
                 tab[i] -= partMandates[i].Mandates;
                 mandCounter += partMandates[i].Mandates;

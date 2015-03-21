@@ -1,15 +1,14 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
 using MasterCoder.PKW.Mandates;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace MasterCoder.PKW.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
+        [TestCase]
         [Ignore]
         public void file_name_validation_test()
         {
@@ -27,62 +26,228 @@ namespace MasterCoder.PKW.Tests
 
 
 
-        internal class InputParametersException : Exception
-        {
-            public InputParametersException(string message)
-                : base(message)
-            {
-            }
-        }
-
-        private static void ValidateInputParameters(string[] args)
-        {
-            if (args.Length != 3)
-            {
-                throw new InputParametersException("Parameters count error.");
-            }
-
-            uint test;
-            if (!UInt32.TryParse(args[0], out test) || !UInt32.TryParse(args[1], out test))
-            {
-                //poprawa literówki w opisie błędu
-                throw new InputParametersException("Parameter should be digit.");
-            }
-
-            if (string.IsNullOrWhiteSpace(args[2]) || !Directory.Exists(args[2]))
-            {
-                throw new InputParametersException("Wrong path name.");
-            }
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InputParametersException))]
+        [TestCase]
+        [ExpectedException(typeof (InputParametersException))]
         public void input_parameters_validation_test()
         {
 
-            ValidateInputParameters(new string[] { });
+            Validator.ValidateInputParameters(new string[] {});
 
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(InputParametersException))]
+        [TestCase]
+        [ExpectedException(typeof (InputParametersException))]
         public void input_parameters_validation_test_2()
         {
-            ValidateInputParameters(new [] { "","",""});
+            Validator.ValidateInputParameters(new[] {"", "", ""});
         }
 
-        [TestMethod]
+        [TestCase]
         public void input_parameters_validation_test_3()
         {
-            ValidateInputParameters(new[] { "4", "1", "c:\\data" });
+            Validator.ValidateInputParameters(new[] {"4", "1", "c:\\"});
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(InputParametersException))]
+        [TestCase]
+        [ExpectedException(typeof (InputParametersException))]
         public void input_parameters_validation_test_4()
         {
-            ValidateInputParameters(new[] { "-4", "-1", "c:\\data" });
+            Validator.ValidateInputParameters(new[] {"-4", "-1", "c:\\"});
         }
 
+        [TestCase]
+        [ExpectedException(typeof (InputParametersException))]
+        public void input_parameters_validation_test_5()
+        {
+            Validator.ValidateInputParameters(new[] {"4", "1", " "});
+        }
+
+        [TestCase]
+        [ExpectedException(typeof (InputParametersException))]
+        public void input_parameters_validation_test_6()
+        {
+            Validator.ValidateInputParameters(new[] {"4", "1", "sdfsdfsd"});
+        }
+
+        [TestCase]
+        public void test_method_dhondta_2()
+        {
+            var methodHondt = new MandateMethodDHondta();
+            var votes = new List<Vote>
+            {
+                new Vote {PartShortName = "PO", PartName = "Platforma Obywatelska", ValidVotes = 1228},
+                new Vote {PartShortName = "PIS", PartName = "Prawo i Sprawiedliwość", ValidVotes = 1012},
+                new Vote {PartShortName = "PSL", PartName = "Polskie Stronnictwo Ludowe", ValidVotes = 850},
+                new Vote {PartShortName = "SLD", PartName = "Sojusz Lewicy Demokratycznej", ValidVotes = 543},
+                new Vote {PartShortName = "NP", PartName = "Nowa Prawica", ValidVotes = 352}
+            };
+
+            var calculateMandates = methodHondt.CalculateMandates(votes, 7);
+
+            foreach (var mandate in calculateMandates)
+            {
+                if (mandate.PartShortName == "PO")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PIS")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PSL")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "SLD")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "NP")
+                {
+                    Assert.AreEqual(0, mandate.Mandates);
+                }
+
+            }
+
+        }
+
+        [TestCase]
+        public void test_method_dhondta_1()
+        {
+            var methodHondt = new MandateMethodDHondta();
+            Assert.IsNotNull(methodHondt);
+
+            var votes = new List<Vote>
+            {
+                new Vote {PartShortName = "PO", PartName = "Platforma Obywatelska", ValidVotes = 720},
+                new Vote {PartShortName = "PIS", PartName = "Prawo i Sprawiedliwość", ValidVotes = 300},
+                new Vote {PartShortName = "PSL", PartName = "Polskie Stronnictwo Ludowe", ValidVotes = 480}
+            };
+
+            Assert.IsNotNull(votes);
+
+            var partMandates = methodHondt.InitializeMandates(votes);
+
+            Assert.IsNotNull(partMandates);
+
+            var calculateMandates = methodHondt.CalculateMandates(votes, 8);
+
+            Assert.IsNotNull(calculateMandates);
+
+            foreach (var mandate in calculateMandates)
+            {
+                if (mandate.PartShortName == "PO")
+                {
+                    Assert.AreEqual(4, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PIS")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PSL")
+                {
+                    Assert.AreEqual(3, mandate.Mandates);
+                }
+
+            }
+        }
+
+        [TestCase]
+        public void test_method_SaintLague_1()
+        {
+            var mandateMethodSainteLague = new MandateMethodSainteLague();
+
+            var votes = new List<Vote>
+            {
+                new Vote {PartShortName = "PO", PartName = "Platforma Obywatelska", ValidVotes = 1228},
+                new Vote {PartShortName = "PIS", PartName = "Prawo i Sprawiedliwość", ValidVotes = 1012},
+                new Vote {PartShortName = "PSL", PartName = "Polskie Stronnictwo Ludowe", ValidVotes = 850},
+                new Vote {PartShortName = "SLD", PartName = "Sojusz Lewicy Demokratycznej", ValidVotes = 543},
+                new Vote {PartShortName = "NP", PartName = "Nowa Prawica", ValidVotes = 352}
+            };
+
+            var calculateMandates = mandateMethodSainteLague.CalculateMandates(votes, 7);
+
+            foreach (var mandate in calculateMandates)
+            {
+                if (mandate.PartShortName == "PO")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PIS")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PSL")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "SLD")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "NP")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+            }
+
+        }
+
+        [TestCase]
+        public void test_method_HareNiemeyer_1()
+        {
+            var methodHareNiemeyer = new MandateMethodHareNiemeyer();
+
+            var votes = new List<Vote>
+            {
+                new Vote {PartShortName = "PO", PartName = "Platforma Obywatelska", ValidVotes = 1228},
+                new Vote {PartShortName = "PIS", PartName = "Prawo i Sprawiedliwość", ValidVotes = 1012},
+                new Vote {PartShortName = "PSL", PartName = "Polskie Stronnictwo Ludowe", ValidVotes = 850},
+                new Vote {PartShortName = "SLD", PartName = "Sojusz Lewicy Demokratycznej", ValidVotes = 543},
+                new Vote {PartShortName = "NP", PartName = "Nowa Prawica", ValidVotes = 352}
+            };
+
+            var calculateMandates = methodHareNiemeyer.CalculateMandates(votes, 7);
+
+            foreach (var mandate in calculateMandates)
+            {
+                if (mandate.PartShortName == "PO")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PIS")
+                {
+                    Assert.AreEqual(2, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "PSL")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "SLD")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+
+                if (mandate.PartShortName == "NP")
+                {
+                    Assert.AreEqual(1, mandate.Mandates);
+                }
+            }
+
+        }
     }
 }

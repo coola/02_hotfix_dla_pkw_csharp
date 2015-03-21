@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modules>
+    <Module skippedDueTo="Filter" hash="9E-9C-9D-45-B4-09-A9-0D-44-A0-A0-3D-32-51-F6-C6-D0-CD-C1-F9">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="2F-89-CC-BD-74-AE-56-FB-7A-FA-0A-22-6A-C6-0A-80-0F-D6-05-8E">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\nunit-console.exe</FullName>
+      <ModuleName>nunit-console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="33-E1-CA-24-52-5A-B7-C7-C4-AF-91-2C-A9-4A-C0-37-67-0D-5B-FE">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit.core.dll</FullName>
+      <ModuleName>nunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="74-74-F6-87-59-E1-5F-4F-5F-5E-6E-82-50-E8-E2-46-D4-86-15-76">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit.util.dll</FullName>
+      <ModuleName>nunit.util</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="2A-C4-E5-DE-F3-EE-AD-84-E1-65-84-CC-15-90-76-96-E7-01-44-4E">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit-console-runner.dll</FullName>
+      <ModuleName>nunit-console-runner</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="D3-A4-4D-85-55-F7-CE-EF-A5-90-AA-EF-58-E0-9F-B6-CC-27-99-53">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit.core.interfaces.dll</FullName>
+      <ModuleName>nunit.core.interfaces</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="40-3E-36-42-D5-5B-23-28-38-D4-15-50-4F-8C-3E-95-A6-07-2B-A9">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="22-E6-71-86-D6-7B-D3-49-A5-A8-79-E4-CB-D0-C2-47-74-A6-70-C7">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="33-F8-44-EA-4D-8F-1C-5A-FF-AC-EC-B4-B6-72-7B-D2-2C-00-0C-C0">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5E-10-40-D3-A5-10-AD-1F-4E-38-FF-27-DF-FB-49-DC-04-85-89-88">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</FullName>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="33-E1-CA-24-52-5A-B7-C7-C4-AF-91-2C-A9-4A-C0-37-67-0D-5B-FE">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit.core.dll</FullName>
+      <ModuleName>nunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="22-E6-71-86-D6-7B-D3-49-A5-A8-79-E4-CB-D0-C2-47-74-A6-70-C7">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="33-F8-44-EA-4D-8F-1C-5A-FF-AC-EC-B4-B6-72-7B-D2-2C-00-0C-C0">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="40-3E-36-42-D5-5B-23-28-38-D4-15-50-4F-8C-3E-95-A6-07-2B-A9">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="D3-A4-4D-85-55-F7-CE-EF-A5-90-AA-EF-58-E0-9F-B6-CC-27-99-53">
+      <FullName>C:\Program Files\SharpDevelop\4.4\bin\Tools\NUnit\lib\nunit.core.interfaces.dll</FullName>
+      <ModuleName>nunit.core.interfaces</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="E2-56-F6-A1-A6-5B-E8-13-A2-C0-AA-9A-52-3C-E1-71-9B-04-0D-47">
+      <FullName>c:\temp\nunit20\ShadowCopyCache\3388_635625604673585140\Tests_3191281\assembly\dl3\4b390a91\c3d3c4fa_fe63d001\MasterCoder.PKW.Tests.DLL</FullName>
+      <ModuleName>MasterCoder.PKW.Tests</ModuleName>
+      <Files>
+        <File uid="1" fullPath="c:\Documents and Settings\coola\Moje dokumenty\Visual Studio 2010\Projects\02_hotfix_dla_pkw_csharp-master\MasterCoder.PKW.Tests\UnitTest1.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <FullName>MasterCoder.PKW.Tests.UnitTest1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="5" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::file_name_validation_test()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="1" ordinal="0" offset="0" sl="16" sc="9" el="16" ec="10" />
+                <SequencePoint vc="0" uspid="2" ordinal="1" offset="1" sl="18" sc="18" el="18" ec="29" />
+                <SequencePoint vc="0" uspid="3" ordinal="2" offset="8" sl="19" sc="22" el="19" ec="33" />
+                <SequencePoint vc="0" uspid="4" ordinal="3" offset="15" sl="20" sc="26" el="20" ec="37" />
+                <SequencePoint vc="0" uspid="5" ordinal="4" offset="19" sl="21" sc="30" el="21" ec="41" />
+                <SequencePoint vc="0" uspid="6" ordinal="5" offset="23" sl="22" sc="25" el="22" ec="26" />
+                <SequencePoint vc="0" uspid="7" ordinal="6" offset="24" sl="23" sc="29" el="23" ec="93" />
+                <SequencePoint vc="0" uspid="8" ordinal="7" offset="86" sl="24" sc="29" el="25" ec="92" />
+                <SequencePoint vc="0" uspid="9" ordinal="8" offset="111" sl="26" sc="25" el="26" ec="26" />
+                <SequencePoint vc="0" uspid="10" ordinal="9" offset="112" sl="21" sc="62" el="21" ec="66" />
+                <SequencePoint vc="0" uspid="11" ordinal="10" offset="116" sl="21" sc="42" el="21" ec="60" />
+                <SequencePoint vc="0" uspid="12" ordinal="11" offset="133" sl="20" sc="58" el="20" ec="62" />
+                <SequencePoint vc="0" uspid="13" ordinal="12" offset="137" sl="20" sc="38" el="20" ec="56" />
+                <SequencePoint vc="0" uspid="14" ordinal="13" offset="157" sl="19" sc="54" el="19" ec="58" />
+                <SequencePoint vc="0" uspid="15" ordinal="14" offset="161" sl="19" sc="34" el="19" ec="52" />
+                <SequencePoint vc="0" uspid="16" ordinal="15" offset="181" sl="18" sc="50" el="18" ec="54" />
+                <SequencePoint vc="0" uspid="17" ordinal="16" offset="185" sl="18" sc="30" el="18" ec="48" />
+                <SequencePoint vc="0" uspid="18" ordinal="17" offset="205" sl="27" sc="9" el="27" ec="10" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="19" ordinal="0" offset="131" path="0" />
+                <BranchPoint vc="0" uspid="20" ordinal="1" offset="131" path="1" />
+                <BranchPoint vc="0" uspid="21" ordinal="2" offset="152" path="0" />
+                <BranchPoint vc="0" uspid="22" ordinal="3" offset="152" path="1" />
+                <BranchPoint vc="0" uspid="23" ordinal="4" offset="176" path="0" />
+                <BranchPoint vc="0" uspid="24" ordinal="5" offset="176" path="1" />
+                <BranchPoint vc="0" uspid="25" ordinal="6" offset="200" path="0" />
+                <BranchPoint vc="0" uspid="26" ordinal="7" offset="200" path="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="1" ordinal="0" offset="0" sl="16" sc="9" el="16" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="6" sequenceCoverage="81" branchCoverage="80" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::ValidateInputParameters(System.String[])</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="5" uspid="27" ordinal="0" offset="0" sl="40" sc="9" el="40" ec="10" />
+                <SequencePoint vc="5" uspid="28" ordinal="1" offset="1" sl="41" sc="13" el="41" ec="34" />
+                <SequencePoint vc="1" uspid="29" ordinal="2" offset="11" sl="42" sc="13" el="42" ec="14" />
+                <SequencePoint vc="1" uspid="30" ordinal="3" offset="12" sl="43" sc="17" el="43" ec="79" />
+                <SequencePoint vc="4" uspid="31" ordinal="4" offset="23" sl="47" sc="13" el="47" ec="92" />
+                <SequencePoint vc="3" uspid="32" ordinal="5" offset="52" sl="48" sc="13" el="48" ec="14" />
+                <SequencePoint vc="3" uspid="33" ordinal="6" offset="53" sl="50" sc="17" el="50" ec="82" />
+                <SequencePoint vc="1" uspid="34" ordinal="7" offset="64" sl="53" sc="13" el="53" ec="82" />
+                <SequencePoint vc="0" uspid="35" ordinal="8" offset="89" sl="54" sc="13" el="54" ec="14" />
+                <SequencePoint vc="0" uspid="36" ordinal="9" offset="90" sl="55" sc="17" el="55" ec="72" />
+                <SequencePoint vc="1" uspid="37" ordinal="10" offset="101" sl="57" sc="9" el="57" ec="10" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="38" ordinal="0" offset="9" path="0" />
+                <BranchPoint vc="4" uspid="39" ordinal="1" offset="9" path="1" />
+                <BranchPoint vc="1" uspid="40" ordinal="2" offset="33" path="0" />
+                <BranchPoint vc="3" uspid="41" ordinal="3" offset="33" path="1" />
+                <BranchPoint vc="3" uspid="42" ordinal="4" offset="50" path="0" />
+                <BranchPoint vc="1" uspid="43" ordinal="5" offset="50" path="1" />
+                <BranchPoint vc="1" uspid="44" ordinal="6" offset="72" path="0" />
+                <BranchPoint vc="0" uspid="45" ordinal="7" offset="72" path="1" />
+                <BranchPoint vc="0" uspid="46" ordinal="8" offset="87" path="0" />
+                <BranchPoint vc="1" uspid="47" ordinal="9" offset="87" path="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="5" uspid="27" ordinal="0" offset="0" sl="40" sc="9" el="40" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="66" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::input_parameters_validation_test()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="48" ordinal="0" offset="0" sl="62" sc="9" el="62" ec="10" />
+                <SequencePoint vc="1" uspid="49" ordinal="1" offset="1" sl="64" sc="13" el="64" ec="55" />
+                <SequencePoint vc="0" uspid="50" ordinal="2" offset="13" sl="66" sc="9" el="66" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="48" ordinal="0" offset="0" sl="62" sc="9" el="62" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="66" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::input_parameters_validation_test_2()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="51" ordinal="0" offset="0" sl="71" sc="9" el="71" ec="10" />
+                <SequencePoint vc="1" uspid="52" ordinal="1" offset="1" sl="72" sc="13" el="72" ec="57" />
+                <SequencePoint vc="0" uspid="53" ordinal="2" offset="39" sl="73" sc="9" el="73" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="51" ordinal="0" offset="0" sl="71" sc="9" el="71" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::input_parameters_validation_test_3()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="54" ordinal="0" offset="0" sl="77" sc="9" el="77" ec="10" />
+                <SequencePoint vc="1" uspid="55" ordinal="1" offset="1" sl="78" sc="13" el="78" ec="65" />
+                <SequencePoint vc="1" uspid="56" ordinal="2" offset="39" sl="79" sc="9" el="79" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="54" ordinal="0" offset="0" sl="77" sc="9" el="77" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="66" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::input_parameters_validation_test_4()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="57" ordinal="0" offset="0" sl="84" sc="9" el="84" ec="10" />
+                <SequencePoint vc="1" uspid="58" ordinal="1" offset="1" sl="85" sc="13" el="85" ec="67" />
+                <SequencePoint vc="0" uspid="59" ordinal="2" offset="39" sl="86" sc="9" el="86" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="57" ordinal="0" offset="0" sl="84" sc="9" el="84" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="66" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::input_parameters_validation_test_5()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="60" ordinal="0" offset="0" sl="91" sc="9" el="91" ec="10" />
+                <SequencePoint vc="1" uspid="61" ordinal="1" offset="1" sl="92" sc="13" el="92" ec="64" />
+                <SequencePoint vc="0" uspid="62" ordinal="2" offset="39" sl="93" sc="9" el="93" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="60" ordinal="0" offset="0" sl="91" sc="9" el="91" ec="10" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="63" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <FullName>MasterCoder.PKW.Tests.UnitTest1/InputParametersException</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Void MasterCoder.PKW.Tests.UnitTest1/InputParametersException::.ctor(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="64" ordinal="0" offset="0" sl="33" sc="13" el="34" ec="32" />
+                <SequencePoint vc="4" uspid="65" ordinal="1" offset="8" sl="35" sc="13" el="35" ec="14" />
+                <SequencePoint vc="4" uspid="66" ordinal="2" offset="9" sl="36" sc="13" el="36" ec="14" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="4" uspid="64" ordinal="0" offset="0" sl="33" sc="13" el="34" ec="32" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="13-4C-94-D1-A1-A5-D9-8F-F1-E4-CE-A7-87-EF-CC-42-FC-6B-CA-BC">
+      <FullName>c:\temp\nunit20\ShadowCopyCache\3388_635625604673585140\Tests_3191281\assembly\dl3\dd9ba582\00107720_92b0cd01\nunit.framework.DLL</FullName>
+      <ModuleName>nunit.framework</ModuleName>
+      <Classes />
+    </Module>
+  </Modules>
+</CoverageSession>

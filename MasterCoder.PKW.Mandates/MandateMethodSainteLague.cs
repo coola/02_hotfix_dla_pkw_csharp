@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    internal class MandateMethodSainteLague : IMandateMethod
+    public class MandateMethodSainteLague : IMandateMethod
     {
         public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
@@ -14,7 +14,8 @@ namespace MasterCoder.PKW.Mandates
 
             int maxInd = 0;
 
-            for (int i = mandatesCount; i >= 0; i--)
+            //poprawnienie błędu w warunku wyjścia z pętli było:i >= 0, powinno być i > 0 
+            for (int i = mandatesCount; i > 0; i--)
             {
                 float m = -1;
                 for (int j = 0; j < calcTab.Count; j++)
@@ -48,7 +49,8 @@ namespace MasterCoder.PKW.Mandates
 
         private float Calc(int v, int mandates)
         {
-            return (float)((v * 1.0) / (mandates + 1.0));
+            //poprawka współczynnika - usunięcie mnożenia przez jeden, dodanie mnożenia przez dwa mandates
+            return (float) (v / (2 * mandates + 1.0));
         }
     }
 }

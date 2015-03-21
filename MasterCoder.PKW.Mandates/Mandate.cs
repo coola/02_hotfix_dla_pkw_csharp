@@ -2,16 +2,17 @@
 
 namespace MasterCoder.PKW.Mandates
 {
-    internal sealed class Mandate
+    public sealed class Mandate
     {
         public string PartShortName { get; set; }
         public string PartName { get; set; }
         public int Mandates { get; set; }
 
-        public Mandate(string name1, string name2, int mandates)
+        //poprawienie błędu związanego z pomyleniem parametrów wywołania konstruktora
+        public Mandate(string partShortName, string partName, int mandates)
         {
-            PartName = name1;
-            PartShortName = name2;
+            PartShortName = partShortName;
+            PartName = partName;
             Mandates = mandates;
         }
     }
