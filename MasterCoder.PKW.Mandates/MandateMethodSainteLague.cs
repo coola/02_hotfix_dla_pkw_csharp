@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    public class MandateMethodSainteLague : IMandateMethod
+    public class MandateMethodSainteLague : MandateMethod
     {
-        public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
+        public override List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
-            List<Mandate> partMandates = Init(votes);
+            List<Mandate> partMandates = InitializeMandates(votes);
 
             List<float> calcTab = new List<float>(votes.Select(x => (float)x.ValidVotes));
 
@@ -34,22 +34,9 @@ namespace MasterCoder.PKW.Mandates
             return partMandates;
         }
 
-        private List<Mandate> Init(List<Vote> v)
-        {
-            List<Mandate> partMandates = new List<Mandate>(v.Count);
-
-            foreach(var vote in v)
-            {
-                var mandate = new Mandate(vote.PartShortName, vote.PartName, 0);
-                partMandates.Add(mandate);
-            }
-
-            return partMandates;
-        }
-
         private float Calc(int v, int mandates)
         {
-            //poprawka współczynnika - usunięcie mnożenia przez jeden, dodanie mnożenia przez dwa mandates
+            //poprawka współczynnika - usunięcie mnożenia przez jeden, dodanie mnożenia przez dwa zmiennej mandates
             return (float) (v / (2 * mandates + 1.0));
         }
     }

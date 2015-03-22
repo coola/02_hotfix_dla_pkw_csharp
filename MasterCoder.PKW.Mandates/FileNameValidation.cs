@@ -12,6 +12,7 @@ namespace MasterCoder.PKW.Mandates
         public static bool Validate(string n)
         {
             IPAddress ip;
+            n = n.Substring(0, n.Length - 4);
             return !string.IsNullOrEmpty(n) && IPAddress.TryParse(n, out ip);
         }
     }

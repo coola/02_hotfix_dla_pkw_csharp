@@ -1,6 +1,7 @@
 ﻿using System;
 using MasterCoder.PKW.Mandates;
 using System.Collections.Generic;
+
 using NUnit.Framework;
 
 namespace MasterCoder.PKW.Tests
@@ -8,6 +9,8 @@ namespace MasterCoder.PKW.Tests
     [TestFixture]
     public class UnitTest1
     {
+        private const string TestFilesPath = @"C:\TEMP\tests";
+
         [TestCase]
         [Ignore]
         public void file_name_validation_test()
@@ -204,6 +207,29 @@ namespace MasterCoder.PKW.Tests
 
         }
 
+
+        [TestCase]
+        public void test_method_performance_1()
+        {
+            var mandateMethodDHondta = new MandateMethodDHondta();
+            var mandateMethodSainteLague = new MandateMethodSainteLague();
+            var mandateMethodHareNiemeyer = new MandateMethodHareNiemeyer();
+
+            var votes = new List<Vote>
+            {
+                new Vote {PartShortName = "PO", PartName = "Platforma Obywatelska", ValidVotes = 20000000},
+                new Vote {PartShortName = "PIS", PartName = "Prawo i Sprawiedliwość", ValidVotes = 30000000},
+                new Vote {PartShortName = "PSL", PartName = "Polskie Stronnictwo Ludowe", ValidVotes = 10000000},
+                new Vote {PartShortName = "SLD", PartName = "Sojusz Lewicy Demokratycznej", ValidVotes = 10000000},
+                new Vote {PartShortName = "NP", PartName = "Nowa Prawica", ValidVotes = 30000000}
+            };
+
+            var mandateMethodDHondtaCalculateMandates = mandateMethodDHondta.CalculateMandates(votes, 500);
+            var mandateMethodSainteLagueCalculateMandates = mandateMethodSainteLague.CalculateMandates(votes, 500);
+            var mandateMethodHareNiemeyerCalculateMandates = mandateMethodHareNiemeyer.CalculateMandates(votes, 500);
+
+        }
+
         [TestCase]
         public void test_method_HareNiemeyer_1()
         {
@@ -247,6 +273,14 @@ namespace MasterCoder.PKW.Tests
                     Assert.AreEqual(1, mandate.Mandates);
                 }
             }
+
+        }
+
+        [TestCase]
+        public void test_method_check_input_files_1()
+        {
+
+            IInputVotes votes = new InputVotes(TestFilesPath);
 
         }
     }

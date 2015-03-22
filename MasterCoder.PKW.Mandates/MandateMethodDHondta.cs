@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    public class MandateMethodDHondta : IMandateMethod
+    public class MandateMethodDHondta : MandateMethod
     {
-        public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
+        public override List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
             var v = votes;
             List<Mandate> partMandates = InitializeMandates(v);
@@ -29,19 +29,6 @@ namespace MasterCoder.PKW.Mandates
 
                 partMandates[maxInd].Mandates++;
                 tab[maxInd] = Calc(v[maxInd].ValidVotes, partMandates[maxInd].Mandates);
-            }
-
-            return partMandates;
-        }
-
-        public List<Mandate> InitializeMandates(List<Vote> v)
-        {
-            List<Mandate> partMandates = new List<Mandate>(v.Count);
-
-            foreach(var vote in v)
-            {
-                var mandate = new Mandate(vote.PartShortName, vote.PartName, 0);
-                partMandates.Add(mandate);
             }
 
             return partMandates;

@@ -3,7 +3,7 @@
 
 namespace MasterCoder.PKW.Mandates
 {
-    internal interface IInputVotes
+    public interface IInputVotes
     {
         List<Vote> GetAllValidVotes();
         List<Vote> GetAllValidVotesForPart(string partShortName);

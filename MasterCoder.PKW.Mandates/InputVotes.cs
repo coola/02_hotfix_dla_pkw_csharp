@@ -6,7 +6,10 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    internal class InputVotes : IInputVotes
+
+    // interfejs IInputVote nie był nigdzie używany, 
+    // więc został0 zamienione wywołanie implementacji na wywołanie tego interfejsu
+    public class InputVotes : IInputVotes
     {
         private List<Vote> v { get; set; }
         private string FilePath { get; set; }
@@ -32,27 +35,34 @@ namespace MasterCoder.PKW.Mandates
             }
         }
 
-        private void InitializeValidVotesFromFileData(string[] l)
+        public void InitializeValidVotesFromFileData(string[] l)
         {
             for(int i=0; i<l.Length;i++)
             {
-                var f = l[i].Split(';');
-                var vote = new Vote(f[0], f[1], Int32.Parse(f[2]));
                 
-                bool updated = false;
-
-                for (int j = 0; j < v.Count(); j++)
+                var f = l[i].Split(';');
+                //dodanie walidacji dla danych wejściowych z pliku. Zgodnie ze specyfikacją, złe dane nie są ładowane.
+                var tempParse = 0;
+                var valid = f.Length == 3 && Int32.TryParse(f[2], out tempParse);
+                if (valid)
                 {
-                    if(v[j].PartShortName==vote.PartShortName)
-                    {
-                        v[j].ValidVotes = vote.ValidVotes;
-                        updated = true;
-                        break;
-                    }
-                }
+                    var vote = new Vote(f[0], f[1], tempParse);
 
-                if (!updated)
-                    v.Add(vote);
+                    bool updated = false;
+
+                    for (int j = 0; j < v.Count(); j++)
+                    {
+                        if (v[j].PartShortName == vote.PartShortName)
+                        {
+                            v[j].ValidVotes = vote.ValidVotes;
+                            updated = true;
+                            break;
+                        }
+                    }
+
+                    if (!updated)
+                        v.Add(vote);
+                }
             }
         }
 

@@ -3,7 +3,8 @@ using System.IO;
 
 namespace MasterCoder.PKW.Mandates
 {
-	//wyniesienie walidacji do klasy - zapewnie Single Responisbility Principle, pomaga w testowaniu
+	// wyniesienie walidacji do klasy - zapewnienie Single Responisbility Principle 
+    // oprócz tego to pomaga w testowaniu jednostkowym
 	public static class Validator
 	{
 		public static void ValidateInputParameters(string[] args)

@@ -62,6 +62,7 @@
     <Compile Include="IMandateMethod.cs" />
     <Compile Include="InputParametersException.cs" />
     <Compile Include="InputVotes.cs" />
+    <Compile Include="MandateMethod.cs" />
     <Compile Include="MandateMethodHareNiemeyer.cs" />
     <Compile Include="MandateMethodSainteLague.cs" />
     <Compile Include="MandateMethodFactory.cs" />

@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    public class MandateMethodHareNiemeyer : IMandateMethod
+    public class MandateMethodHareNiemeyer : MandateMethod
     {
-        public List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
+        public override List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
             var v = votes;
-            List<Mandate> partMandates = Init(v);
+            List<Mandate> partMandates = InitializeMandates(v);
 
             List<double> tab = new List<double>();
             var totalVotes = v.Sum(x => x.ValidVotes);
@@ -50,17 +50,6 @@ namespace MasterCoder.PKW.Mandates
             return partMandates;
         }
 
-        private List<Mandate> Init(List<Vote> votes)
-        {
-            List<Mandate> partMandates = new List<Mandate>(votes.Count);
-
-            foreach(var vote in votes)
-            {
-                var mandate = new Mandate(vote.PartShortName, vote.PartName, 0);
-                partMandates.Add(mandate);
-            }
-
-            return partMandates;
-        }
+       
     }
 }

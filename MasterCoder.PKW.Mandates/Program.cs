@@ -12,7 +12,9 @@ namespace MasterCoder.PKW.Mandates
             try
             {
                 Validator.ValidateInputParameters(args);
-                InputVotes votes = new InputVotes(args[2]);
+
+                // wykorzystanie interfejsu zamiast implementacji
+                IInputVotes votes = new InputVotes(args[2]);
 
                 IMandateMethod m = MandateMethodFactory.Get((MethodEnum)Int32.Parse(args[0]));
                 var mandates = m.CalculateMandates(votes.GetAllValidVotes(), Int32.Parse(args[1]));
