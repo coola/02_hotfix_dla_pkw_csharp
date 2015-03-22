@@ -3,7 +3,7 @@
 
 namespace MasterCoder.PKW.Mandates
 {
-    public class InputParametersException : Exception
+    internal class InputParametersException : Exception
     {
         public InputParametersException(string message)
             : base(message)

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 namespace MasterCoder.PKW.Mandates
 {
     // wyniesienie wspólnego kodu dla algorytmów obliczeń do klasy abstrakcyjnej
-    public abstract class MandateMethod : IMandateMethod
+    internal abstract class MandateMethod : IMandateMethod
     {
-        public List<Mandate> InitializeMandates(List<Vote> v)
+        protected List<Mandate> InitializeMandates(List<Vote> v)
         {
             List<Mandate> partMandates = new List<Mandate>(v.Count);
 

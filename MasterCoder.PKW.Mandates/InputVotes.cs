@@ -8,8 +8,8 @@ namespace MasterCoder.PKW.Mandates
 {
 
     // interfejs IInputVote nie był nigdzie używany, 
-    // więc został0 zamienione wywołanie implementacji na wywołanie tego interfejsu
-    public class InputVotes : IInputVotes
+    // więc zostało zamienione wywołanie implementacji na wywołanie tego interfejsu
+    internal class InputVotes : IInputVotes
     {
         private List<Vote> v { get; set; }
         private string FilePath { get; set; }
@@ -35,7 +35,7 @@ namespace MasterCoder.PKW.Mandates
             }
         }
 
-        public void InitializeValidVotesFromFileData(string[] l)
+        private void InitializeValidVotesFromFileData(string[] l)
         {
             for(int i=0; i<l.Length;i++)
             {

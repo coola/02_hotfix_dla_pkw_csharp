@@ -9,7 +9,7 @@ namespace MasterCoder.PKW.Mandates
         public int Mandates { get; set; }
 
         //poprawienie błędu związanego z pomyleniem parametrów wywołania konstruktora
-        public Mandate(string partShortName, string partName, int mandates)
+        internal Mandate(string partShortName, string partName, int mandates)
         {
             PartShortName = partShortName;
             PartName = partName;

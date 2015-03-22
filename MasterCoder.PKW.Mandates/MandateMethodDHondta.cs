@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MasterCoder.PKW.Mandates
 {
-    public class MandateMethodDHondta : MandateMethod
+    internal class MandateMethodDHondta : MandateMethod
     {
         public override List<Mandate> CalculateMandates(List<Vote> votes, int mandatesCount)
         {
